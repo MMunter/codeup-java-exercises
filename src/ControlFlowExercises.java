@@ -11,10 +11,11 @@ public class ControlFlowExercises {
             System.out.println("------ | ------- | -----");
 
         for(long i = 1; i <= number; i++){
-            System.out.print(i);
-            System.out.print("      | ");
-            System.out.format("%,4d", i * i);
-            System.out.println("    |   " + i * i * i);
+            System.out.format("%-7d", i);
+            System.out.print(" | ");
+            System.out.format("%-8d", i * i);
+            System.out.print(" | ");
+            System.out.format("%-9d", i * i * i);
             }
 
         String answer = "";
