@@ -18,6 +18,10 @@ public class MethodsExercises {
        }
        while(!getInteger(input, 1, 10));
 
+        System.out.println("Factorial: Please enter a number between 1 and 10");
+        int number = sc.nextInt();
+
+        System.out.println();
     }
     public static float addition(float a, float b){
         return a + b;
@@ -51,4 +55,15 @@ public class MethodsExercises {
     public static boolean getInteger(int input, int min, int max){
         return (input >= min && input <= max);
     }
+
+    public static long factorial(long number){
+        long result = 1;
+        if (number >= 1 && number <= 10){
+            for (long i = 1; i <= number; i++){
+                result *= i;
+            }
+        }
+        return result;
+    }
+
 }
