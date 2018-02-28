@@ -10,10 +10,10 @@ public class Bob {
 
            if (input.endsWith("?")) {
                System.out.println("Sure.");
-           } else if (input.endsWith("!")) {
-               System.out.println("Whoa, chill out!");
-           } else if (input.equals("")) {
+           } else if (input.trim().equals("")) {
                System.out.println("Fine. Be that way!");
+           } else if (input.endsWith("!") || input.toUpperCase().equals(input)) {
+               System.out.println("Whoa, chill out!");
            } else {
                System.out.println("Whatever.");
            }
