@@ -15,13 +15,17 @@ public class MethodsExercises {
     }
 
     public static float multiplication(float a, float b){
-        int result = 0;
-       while (a > 0){
-           result += b;
-           a--;
-       }
-       return result;
-    }
+
+            if (b == 1)
+                return a;
+            if (b == 0)
+                return 0;
+            if (b > 1)
+                return multiplication(a, b-1) + a;
+
+            return -1;// it will never be executed
+        }
+
 
     public static float division(float a, float b){
         return a / b;
