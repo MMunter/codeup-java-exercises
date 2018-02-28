@@ -15,7 +15,12 @@ public class MethodsExercises {
     }
 
     public static float multiplication(float a, float b){
-        return a * b;
+        int result = 0;
+       while (a > 0){
+           result += b;
+           a--;
+       }
+       return result;
     }
 
     public static float division(float a, float b){
