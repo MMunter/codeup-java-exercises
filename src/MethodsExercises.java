@@ -1,5 +1,6 @@
-import java.util.Scanner;
+import java.util.*;
 public class MethodsExercises {
+    public static final Random RANDOM = new Random();
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
@@ -26,7 +27,30 @@ public class MethodsExercises {
         System.out.print(number + "! = ");
         System.out.format("%,d%n", answer);
 
+        String diceQuestion = "";
+
+        do {
+            System.out.println("Enter the number of sides for your dice.");
+            int dice = sc.nextInt();
+
+            System.out.println("Would you like to roll the dice?");
+            String response = sc.next().toLowerCase();
+
+            if (response.startsWith("y")) {
+                System.out.println("The result of your first die is " + diceRoll(dice));
+                System.out.println("The result of your second die is " + diceRoll(dice));
+            }
+
+            System.out.println("Would you like to roll the dice again?");
+            diceQuestion = sc.next().toLowerCase();
         }
+        while(diceQuestion.startsWith("y"));
+
+
+        }
+
+
+
     public static float addition(float a, float b){
         return a + b;
     }
@@ -44,7 +68,7 @@ public class MethodsExercises {
             if (b > 1)
                 return multiplication(a, b-1) + a;
 
-            return -1;// it will never be executed
+            return -1;
         }
 
 
@@ -69,5 +93,11 @@ public class MethodsExercises {
         }
         return result;
     }
+
+    public static int diceRoll(int number){
+        int die = (int)(Math.random() * number + 1);
+        return die;
+    }
+
 
 }
