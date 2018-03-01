@@ -27,6 +27,8 @@ public class MethodsExercises {
         System.out.print(number + "! = ");
         System.out.format("%,d%n", answer);
 
+
+//
         String diceQuestion = "";
 
         do {
@@ -45,7 +47,6 @@ public class MethodsExercises {
             diceQuestion = sc.next().toLowerCase();
         }
         while(diceQuestion.startsWith("y"));
-
 
         }
 
@@ -98,6 +99,4 @@ public class MethodsExercises {
         int die = (int)(Math.random() * number + 1);
         return die;
     }
-
-
 }
