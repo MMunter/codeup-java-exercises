@@ -3,6 +3,8 @@ public class HighLow {
     public static final Random RANDOM = new Random();
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+
+
         int guess = 0;
         int guessNum = 1;
         int number = (int) (Math.random() * (99 + 1));
@@ -13,7 +15,6 @@ public class HighLow {
         System.out.println("Guess the number!");
         guess = sc.nextInt();
         sc.nextLine();
-        System.out.println(number);
         System.out.println("Guess Counter: " + guessNum);
 
         if (guess == number){
@@ -48,6 +49,9 @@ public class HighLow {
         System.out.println("The number was " + number);
     }
 
+
     }
+
 }
+
 
