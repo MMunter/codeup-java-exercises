@@ -1,3 +1,5 @@
+package French;
+
 import java.awt.*;
 import java.util.*;
 
@@ -15,7 +17,7 @@ public class FrenchProgram
 
         if (option == 1)
         {
-            DrawingPanel dp = new DrawingPanel (WIDTH, HEIGHT);
+            DrawingPanel dp = new DrawingPanel(WIDTH, HEIGHT);
             Graphics g = dp.getGraphics();
             showFlags(g);
         }

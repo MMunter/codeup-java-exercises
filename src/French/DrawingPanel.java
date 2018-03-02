@@ -1,12 +1,12 @@
-/*
+package French;/*
 Stuart Reges and Marty Stepp
 February 24, 2007
 Some modifications by Tom Bylander in 2010
 
-The DrawingPanel class provides a simple interface for drawing persistent
+The French.DrawingPanel class provides a simple interface for drawing persistent
 images using a Graphics object.  An internal BufferedImage object is used
 to keep track of what has been drawn.  A client of the class simply
-constructs a DrawingPanel of a particular size and then draws on it with
+constructs a French.DrawingPanel of a particular size and then draws on it with
 the Graphics object, setting the background color if they so choose.
 
 To ensure that the image is always displayed, a timer calls repaint at

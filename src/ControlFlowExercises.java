@@ -12,10 +12,8 @@ public class ControlFlowExercises {
 
         for(long i = 1; i <= number; i++){
             System.out.format("%-7d", i);
-            System.out.print(" | ");
-            System.out.format("%-8d", i * i);
-            System.out.print(" | ");
-            System.out.format("%-9d", i * i * i);
+            System.out.print(" | " + i * i);;
+            System.out.println(" | " + i * i * i);
             }
 
         String answer = "";
