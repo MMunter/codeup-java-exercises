@@ -6,13 +6,13 @@ public class ServerNameGenerator {
 
         String[] nouns = {"boy", "girl", "dog", "cat", "baby", "child", "car", "chair", "store", "friend"};
 
-        randomElement(adjectives, nouns);
+        System.out.printf("Here is your server name:%n" + randomElement(adjectives, nouns));
     }
 
-    public static void randomElement(String[] a, String[] b) {
+    public static String randomElement(String[] a, String[] b) {
            int rnd1 = new Random().nextInt(a.length);
            int rnd2 = new Random().nextInt(b.length);
-            System.out.printf("Here is your server name: %n" + a[rnd1] + "-" + b[rnd2]);
+            return  a[rnd1] + "-" + b[rnd2];
     }
 
 }
