@@ -1,14 +1,15 @@
 package movies;
 
+import util.Input;
+
 import java.util.*;
 
 
 public class MoviesApplication {
-    public static Movie[] moviesArray = MoviesArray.findAll();
+        static Movie[] moviesArray = MoviesArray.findAll();
+        static Input userInput = new Input();
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
+        public static void main(String[] args) {
         int response;
 
         do {
@@ -24,8 +25,7 @@ public class MoviesApplication {
             System.out.println("6 - View Musicals");
             System.out.println("7 - View Comedies");
             System.out.println("8 - Add a movie.");
-            response = sc.nextInt();
-
+            response = userInput.getInt();
             userOption(response);
         }
         while (response != 0);
@@ -68,14 +68,12 @@ public class MoviesApplication {
     }
 
     private static void showAll() {
-        Movie moviesArray[] = MoviesArray.findAll();
         for (Movie movie : moviesArray) {
             System.out.println(movie.getName() + " -- " + movie.getCategory());
         }
     }
 
     private static void getCategory(String category) {
-        Movie moviesArray[] = MoviesArray.findAll();
         for (Movie movie : moviesArray) {
             if (movie.getCategory().equals(category)) {
                 System.out.println(movie.getName() + " -- " + movie.getCategory());
@@ -84,24 +82,18 @@ public class MoviesApplication {
     }
 
     private static void addMovie(){
-        Scanner sc = new Scanner(System.in);
-                    System.out.println("Enter a movie name.");
-                    System.out.println("Enter a category.");
-                    String addName = sc.nextLine();
-                    String addCategory = sc.nextLine();
-                    Movie testMovie = new Movie(addName, addCategory);
+                    String addName = userInput.getString ("Enter a movie title.");
+                    String addCategory = userInput.getString("Enter a category.");
+                    Movie newMovie = new Movie(addName, addCategory);
                     Movie[] newMoviesArray = Arrays.copyOf(moviesArray, moviesArray.length + 1);
-                    newMoviesArray[newMoviesArray.length-1] = testMovie;
+                    int lastIndex = newMoviesArray.length - 1;
+                    newMoviesArray[lastIndex] = newMovie;
+                    moviesArray = newMoviesArray;
+
 
     }
 
     }
 
-//}
 
-//                case 6:
-//
-//                    Movie testMovie = Movie(addName, addCategory);
-//                    newMoviesArray[newMoviesArray.length - 1] = testMovie;
-//                    movies = newMoviesArray;
 
