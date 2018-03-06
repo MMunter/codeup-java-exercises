@@ -23,6 +23,7 @@ public class MoviesApplication {
             System.out.println("5 - View Sci-fi movies");
             System.out.println("6 - View Musicals");
             System.out.println("7 - View Comedies");
+            System.out.println("8 - Add a movie.");
             response = sc.nextInt();
 
             userOption(response);
@@ -57,6 +58,12 @@ public class MoviesApplication {
             case 7:
                 getCategory("comedy");
                 break;
+            case 8:
+                addMovie();
+                break;
+            default:
+                System.out.println("That is not a valid option.");
+                break;
         }
     }
 
@@ -76,22 +83,19 @@ public class MoviesApplication {
         }
     }
 
-//    private static void addMovie(){
-//                    Movie[] newMoviesArray = Arrays.copyOf(moviesArray, moviesArray.length + 1);
-//                    Movie testMovie = new Movie();
-//                    System.out.println("Enter a movie name.");
-//                    String addName = sc.nextLine();
-//                    sc.nextLine();
-//                    testMovie.setName(addName);
-//                    System.out.println("Enter a category.");
-//                    addCategory = sc.nextLine();
-//                    testMovie.setCategory(addCategory);
-////                    sc.nextLine();
-//                    newMoviesArray[newMoviesArray.length-1] = testMovie;
-//                    System.out.println(newMoviesArray[newMoviesArray.length-1].getName() + " " + newMoviesArray[newMoviesArray.length-1].getCategory());
+    private static void addMovie(){
+        Scanner sc = new Scanner(System.in);
+                    System.out.println("Enter a movie name.");
+                    System.out.println("Enter a category.");
+                    String addName = sc.nextLine();
+                    String addCategory = sc.nextLine();
+                    Movie testMovie = new Movie(addName, addCategory);
+                    Movie[] newMoviesArray = Arrays.copyOf(moviesArray, moviesArray.length + 1);
+                    newMoviesArray[newMoviesArray.length-1] = testMovie;
 
     }
 
+    }
 
 //}
 

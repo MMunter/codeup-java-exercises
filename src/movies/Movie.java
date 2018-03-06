@@ -32,4 +32,11 @@ public class Movie {
     }
 
 
+
+
+//    -private properties
+//    - a constructor that sets the properties
+//    -getters and setters
+
+
 }
