@@ -19,8 +19,9 @@ public class Student {
 
     private ArrayList<Integer> grades;
 
-    public void addGrade(int grade){
+    public Integer addGrade(int grade){
         grades.add(grade);
+        return null;
     }
 
     public double getGradeAverage(){
@@ -28,9 +29,11 @@ public class Student {
         for(int grade : grades){
             sum += grade;
         }
-
         return sum / grades.size();
+    }
 
+    public void display(){
+        System.out.println(getName() + " | " + getGradeAverage());
     }
 
     public static void main(String[] args) {
